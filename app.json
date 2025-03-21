@@ -1,0 +1,37 @@
+{
+  "name": "SATHANIC-V10",
+  "description": "A powerful WhatsApp bot built with Baileys.",
+  "repository": "https://github.com/sathanicc/SATHANIC-V10-",
+  "logo": "https://imgur.com/a/c6DWXdw.png",
+  "keywords": ["whatsapp", "bot", "nodejs", "baileys"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "SESSION": {
+      "description": "Base64 session string for WhatsApp Web",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "919778158839",
+      "required": true
+    },
+    "PREFIX": {
+      "description": ".",
+      "required": true,
+      "value": "!"
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection string",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
