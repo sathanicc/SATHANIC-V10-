@@ -27,6 +27,11 @@ const startBot = () => {
             console.log("Bot connected successfully!");
         }
     });
+    const config = require("./config");
+
+// Example usage
+console.log(`Bot Name: ${config.SATHANIC-V10}`);
+console.log(`Owner: ${config.919778158839}`);
 
     // Listen for incoming messages
     bot.ev.on("messages.upsert", async (message) => {
