@@ -54,5 +54,25 @@ console.log(`Owner: ${config.919778158839}`);
     });
 };
 
+const { default: makeWASocket, useSingleFileAuthState } = require("@whiskeysockets/baileys");
+const { state, saveState } = useSingleFileAuthState("./session.json");
+
+const bot = makeWASocket({
+    auth: state,
+    browser: ["SATHANIC-V10", "Chrome", "1.0"]
+});
+
+bot.ev.on("creds.update", saveState);
+
+bot.ev.on("connection.update", (update) => {
+    const { connection } = update;
+    if (connection === "open") {
+        console.log("✅ Bot is online!");
+    } else if (connection === "close") {
+        console.log("❌ Disconnected! Restarting...");
+        process.exit(1);
+    }
+});
+
 // Start the bot
 startBot();
