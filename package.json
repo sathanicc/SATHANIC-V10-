@@ -1,0 +1,28 @@
+{
+  "name": "sathanic-v10",
+  "version": "1.0.0",
+  "description": "SATHANIC-V10 WhatsApp Bot using Baileys",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.5.0",
+    "@hapi/boom": "^9.1.0",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sathanicc/SATHANIC-V10-"
+  },
+  "keywords": ["whatsapp", "bot", "baileys", "nodejs"],
+  "author": "Sathanicc",
+  "license": "MIT"
+}
